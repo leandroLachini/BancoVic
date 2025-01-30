@@ -2,11 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-<<<<<<< HEAD
-name: 'my_new_project'
-=======
 name: 'dbt_bancovic'
->>>>>>> e873e0c85d40ea9866c4cd331c7e39b848c43418
 version: '1.0.0'
 config-version: 2
 
@@ -40,15 +36,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-<<<<<<< HEAD
-  my_new_project:
-    # Applies to all files under models/example/
-    example:
-      +materialized: table
-=======
   dbt_bancovic:
     # Applies to all files under models/example/
-    sales_department:
+    transacoes_banco:
         intermediate:
           +materialized: view
           +schema: intermediate
@@ -57,12 +47,11 @@ models:
           +materialized: table
           +schema: marts
 
-        staging:
-          +materialized: view
-          +schema: staging
-          erp:
-            +materialized: view
+    staging:
+      +materialized: view
+      +schema: staging
+      erp:
+        +materialized: view
 
   seeds:
     +schema: seed_data
->>>>>>> e873e0c85d40ea9866c4cd331c7e39b848c43418

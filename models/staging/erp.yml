@@ -1,0 +1,59 @@
+version: 2
+
+sources:
+  - name: erp_bancovic
+    description: Sistema empresarial do Banco Vitoria
+    database: BANCOVIC
+    schema: DBT_LNASCIMENTO
+    tables:
+
+      - name: SEED_AGENCIAS
+        description: Tabela fonte dos dados das agencias do banco.
+        columns:
+          - name: COD_AGENCIA
+            data_tests:
+              - unique
+              - not_null
+
+      - name: SEED_CLIENTES
+        description: Tabela fonte dos dados dos clientes do banco.
+        columns:
+          - name: COD_CLIENTE
+            data_tests:
+              - unique
+              - not_null
+
+      - name: SEED_COLABORADOR_AGENCIA
+        description: Tabela código dos colaboradores e agencias do banco.
+
+      - name: SEED_COLABORADORES
+        description: Tabela fonte dos dados dos colaboradoes do banco.
+        columns:
+          - name: COD_COLABORADOR
+            data_tests:
+              - unique
+              - not_null
+
+      - name: SEED_CONTAS
+        description: Tabela fonte dos dados das contas do banco.
+        columns:
+          - name: NUM_CONTA
+            data_tests:
+              - unique
+              - not_null
+
+      - name: SEED_PROPOSTAS
+        description: Tabela fonte dos dados das propostas do banco.
+        columns:
+          - name: COD_PROPOSTA
+            data_tests:
+              - unique
+              - not_null
+
+      - name: SEED_TRANSACOES
+        description: Tabela fonte dos dados das transacoes do banco.
+        columns:
+          - name: COD_TRANSACAO
+            data_tests:
+              - unique
+              - not_null
