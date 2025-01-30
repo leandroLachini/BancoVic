@@ -11,7 +11,7 @@ with
 
     , remane_table as (
         select
-            , cast(NUM_CONTA as int) as NUM_CONTA
+            cast(NUM_CONTA as int) as NUM_CONTA
             , cast(COD_CLIENTE as int) as COD_CLIENTE
             , cast(COD_AGENCIA as int) as COD_AGENCIA
             , cast(COD_COLABORADOR as int) as COD_COLABORADOR

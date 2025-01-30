@@ -1,4 +1,4 @@
-/* conexao com a fonte de dados das contas */
+/* conexao com a fonte de dados das propostas do bancovic */
 
 with
     source as (
