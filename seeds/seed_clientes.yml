@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: seed_clientes
+    description: "Tabale seed com os dados dos clientes do bancovic."
+    columns:
+      - name: COD_CLIENTE
+        description: "Chave primaria com o codigo do cliente."
+      - name: PRIMEIRO_NOME
+        description: "Primeiro nome do cliente."
+      - name: ULTIMO_NOME
+        description: "Ultimo nome do cliente."
+      - name: EMAIL
+        description: "Email do cliente."
+      - name: TIPO_CLIENTE
+        description: "Tipo de cliente (PF=pessoa fisica ou PJ=pessoa juridica)."
+      - name: DATA_INCLUSAO
+        description: "Data de inclusao do cliente no cadastrado do banco/agencia."
+      - name: CPFCNPJ
+        description: "Numero do CPF ou CNPJ do cliente."
+      - name: DATA_NASCIMENTO
+        description: "Data de nascimento do cliente."
+      - name: ENDERECO
+        description: "Endereco do cliente."
+      - name: CEP
+        description: "CEP do endereco do cliente"

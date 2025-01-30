@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: seed_transacoes
+    description: "Tabale seed com as transacoes realizadas pelo bancovic."
+    columns:
+      - name: COD_TRANSACAO
+        description: "Chave primaria com o codigo da transacao."
+      - name: NUM_CONTA
+        description: "Chave estrangeira com o numero da conta."
+      - name: DATA_TRANSACAO
+        description: "Data que a transacao foi realizada."
+      - name: NOME_TRANSACAO
+        description: "Nome da transacao."
+      - name: VALOR_TRANSACAO
+        description: "Valor da transacao."
