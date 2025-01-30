@@ -6,9 +6,9 @@ with
     )
 
 /* conexao com a staging colaborador */
-    , colaborador as (
+    , colaboradores as (
         select *
-        from {{ ref('stg_erp_colaborador') }}
+        from {{ ref('stg_erp_colaboradores' }}
     )
 
 /* conexao com a staging agencia */
