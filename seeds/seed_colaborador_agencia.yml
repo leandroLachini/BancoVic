@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: seed_colaborador_agencia
+    description: "Tabale seed com os codigos dos colaboradores e angecias do bancovic."
+    columns:
+      - name: COD_COLABORADOR
+        description: "Chave estrangeira com o codigo do colaborador."
+      - name: COD_AGENCIA
+        description: "Chave estrangeira com o codigo da agencia."
