@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: seed_agencias
+    description: "Tabale seed com os dados das agencias do bancovic."
+    columns:
+      - name: COD_AGENCIA
+        description: "Chave primaria com o codigo da agencia."
+      - name: NOME
+        description: "Nome da agencia."
+      - name: ENDERECO
+        description: "Endereco da agencia."
+      - name: CIDADE
+        description: "Nome da cidade onde a agencia está localizada."
+      - name: UF
+        description: "Sigla do estado onde a agencia está localizada."
+      - name: DATA_ABERTURA
+        description: "Data de inaguracao da agencia"
+      - name: TIPO_AGENCIA
+        description: "Tipo de agencia. (fisica ou digital)"

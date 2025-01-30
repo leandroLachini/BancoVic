@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: seed_colaboradores
+    description: "Tabale seed com os dados dos colaboradores do bancovic."
+    columns:
+      - name: COD_COLABORADOR
+        description: "Chave primaria com o codigo do colaborador."
+      - name: PRIMEIRO_NOME
+        description: "Primeiro nome do colaborador."
+      - name: ULTIMO_NOME
+        description: "Ultimo nome do colaborador."
+      - name: EMAIL
+        description: "Email do colaborador."
+      - name: CPF
+        description: "Numero do CPF do colaborador."
+      - name: DATA_NASCIMENTO
+        description: "Data de nascimento do colaborador."
+      - name: ENDERECO
+        description: "Endereco do colaborador."
+      - name: CEP
+        description: "CEP do endereco do colaborador."
