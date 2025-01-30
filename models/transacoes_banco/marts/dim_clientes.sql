@@ -6,14 +6,14 @@ with
             COD_CLIENTE
             , PRIMEIRO_NOME
             , ULTIMO_NOME
-            , NOME_COMPLETO
-            , EMAIL
+            , NOME_COMPLETO_CLIENTE
+            , EMAIL_CLIENTE
             , TIPO_CLIENTE
-            , DATA_INCLUSAO
-            , CPFCNPJ
-            , DATA_NASCIMENTO
-            , ENDERECO
-            , CEP
+            , DATA_INCLUSAO_CLIENTE
+            , CPFCNPJ_CLIENTE
+            , DATA_NASCIMENTO_CLIENTE
+            , ENDERECO_CLIENTE
+            , CEP_CLIENTE
         from {{ref("stg_erp_clientes")}}
     )
 
