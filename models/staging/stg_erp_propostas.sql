@@ -4,22 +4,25 @@ with
     source as (
         select
         *
-        from {{ source('erp_bancovic', 'SEED_CONTAS') }}
+        from {{ source('erp_bancovic', 'SEED_PROPOSTAS') }}
     )
 
 /* categorização dos dados e renomes */
 
     , remane_table as (
         select
-            cast(NUM_CONTA as int) as NUM_CONTA
+            cast(COD_PROPOSTA as int) as COD_PROPOSTA
             , cast(COD_CLIENTE as int) as COD_CLIENTE
-            , cast(COD_AGENCIA as int) as COD_AGENCIA
             , cast(COD_COLABORADOR as int) as COD_COLABORADOR
-            , cast(TIPO_CONTA as varchar) as TIPO_CONTA
-            , cast(SUBSTRING(DATA_ABERTURA, 1, 10) as date) as DATA_ABERTURA_CONTA
-            , cast(SALDO_TOTAL as numeric(18,4)) as SALDO_TOTAL_CONTA
-            , cast(SALDO_DISPONIVEL as numeric(18,4)) as SALDO_DISPONIVEL_CONTA
-            , cast(SUBSTRING(DATA_ULTIMO_LANCAMENTO, 1, 10) as date) as DATA_ULTIMO_LANCAMENTO
+            , cast(SUBSTRING(DATA_ENTRADA_PROPOSTA, 1, 10) as date) as DATA_ENTRADA_PROPOSTA
+            , cast(TAXA_JUROS_MENSAL as numeric(18,4)) as TAXA_JUROS_MENSAL
+            , cast(VALOR_PROPOSTA as numeric(18,4)) as VALOR_PROPOSTA
+            , cast(VALOR_FINANCIAMENTO as numeric(18,4)) as VALOR_FINANCIAMENTO
+            , cast(VALOR_ENTRADA as numeric(18,4)) as VALOR_ENTRADA
+            , cast(VALOR_PRESTACAO as numeric(18,4)) as VALOR_PRESTACAO
+            , cast(QUANTIDADE_PARCELAS as int) as QUANTIDADE_PARCELAS
+            , cast(CARENCIA as int) as CARENCIA
+            , cast(STATUS_PROPOSTA as varchar) as STATUS_PROPOSTA
         from source
     )
 
