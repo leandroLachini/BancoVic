@@ -13,7 +13,7 @@ with
         select
             cast(COD_TRANSACAO as int) as COD_TRANSACAO
             , cast(NUM_CONTA as int) as NUM_CONTA
-            , cast(DATA_TRANSACAO as varchar) as DATA_TRANSACAO
+            , cast(SUBSTRING(DATA_TRANSACAO, 1, 10) as date) as DATA_TRANSACAO
             , cast(NOME_TRANSACAO as varchar) as NOME_TRANSACAO
             , cast(VALOR_TRANSACAO as numeric(18,2)) as VALOR_TRANSACAO
         from source
