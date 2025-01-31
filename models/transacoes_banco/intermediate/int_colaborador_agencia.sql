@@ -1,11 +1,11 @@
 with
-/* conexao com a staging colaborador */
+/* conexao com a staging colaborador_agencia */
     colaborador_agencia as (
         select *
         from {{ ref('stg_erp_colaborador_agencia') }}
     )
 
-/* conexao com a staging colaborador */
+/* conexao com a staging colaboradores */
     , colaboradores as (
         select *
         from {{ ref('stg_erp_colaboradores') }}
