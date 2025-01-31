@@ -1,4 +1,4 @@
-/* tabela fatos propostas */
+/* tabela fato propostas */
 
 with
     int_propostas as (
