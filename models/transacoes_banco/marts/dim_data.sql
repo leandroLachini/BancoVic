@@ -71,6 +71,7 @@ with
                 when QUARTER_OF_YEAR in(1,2) then '1º semestre'
                 else '2º semestre'
             end as nome_semestre
+            , abrev_do_mes || '-' || YEAR_NUMBER as mes_ano
         from id_year_month
     ) 
 
