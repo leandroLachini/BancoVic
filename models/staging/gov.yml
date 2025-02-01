@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: gov_ibge
+    description: Instituto Brasileiro de Geografia e Estatística
+    database: BANCOVIC
+    schema: DBT_LNASCIMENTO
+    tables:
+
+      - name: SEED_IPCA
+        description: Tabela com os indices do IPCA BRASIL.
