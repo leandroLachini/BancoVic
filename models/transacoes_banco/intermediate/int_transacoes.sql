@@ -18,7 +18,7 @@ with
             , transacoes.NUM_CONTA
             , transacoes.DATA_TRANSACAO
             , transacoes.NOME_TRANSACAO
-            , transacoes.VALOR_TRANSACAO
+            , abs(transacoes.VALOR_TRANSACAO) as VALOR_TRANSACAO
             , contas.COD_CLIENTE
             , contas.COD_AGENCIA
             , contas.COD_COLABORADOR
