@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: seed_ipca
+    description: "Tabale seed com os dados do ipca fornecida governo brasileiro atraves do IBGE."
+    columns:
+      - name: PERIODO
+        description: "Data da apuração do indice IPCA."
+      - name: INDICE
+        description: "Valor do indice do IPCA."
