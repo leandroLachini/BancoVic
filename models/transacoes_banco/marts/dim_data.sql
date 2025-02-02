@@ -11,7 +11,7 @@ with
         select 
              raw_generated_data. *
             , MONTH_NAME_SHORT || '-' || YEAR_NUMBER as MONTH_YEAR
-            , cast(YEAR_NUMBER || MONTH_OF_YEAR as numeric(20,0)) as YEAR_MONTH
+            , cast(YEAR_NUMBER || MONTH_OF_YEAR as int) as YEAR_MONTH
         from raw_generated_data 
     )
 
