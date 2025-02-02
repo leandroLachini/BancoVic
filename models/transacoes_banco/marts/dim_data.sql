@@ -11,6 +11,7 @@ with
     , renomeando as ( 
         select 
             DATE_DAY as DATA
+            , MONTH_OF_YEAR as NUMERO_DO_MES
             , DAY_OF_MONTH as DIA_DO_MES
             , QUARTER_OF_YEAR as TRIMESTRE_DO_ANO
             , MONTH_OF_YEAR as MES_DO_ANO
@@ -24,6 +25,7 @@ with
     , add_colunas as (
         select
             DATA
+            , NUMERO_DO_MES
             , DIA_DO_MES
             , ANO
             , ANO_MES
