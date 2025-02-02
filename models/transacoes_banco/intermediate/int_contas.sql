@@ -26,7 +26,7 @@ with
             , contas.SALDO_TOTAL_CONTA
             , contas.SALDO_DISPONIVEL_CONTA
             , contas.DATA_ULTIMO_LANCAMENTO
-            , clientes.NOME_COMPLETO_CLIENTE
+            , clientes.DADOS_CLIENTE
             , clientes.TIPO_CLIENTE
             , clientes.DATA_INCLUSAO_CLIENTE
             , clientes.DATA_NASCIMENTO_CLIENTE

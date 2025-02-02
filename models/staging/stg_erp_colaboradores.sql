@@ -15,7 +15,7 @@ with
             , cast(DATA_NASCIMENTO as date) as DATA_NASCIMENTO_COLABORADOR
             , cast(PRIMEIRO_NOME as varchar) as PRIMEIRO_NOME
             , cast(ULTIMO_NOME as varchar) as ULTIMO_NOME
-            , PRIMEIRO_NOME || ' ' || ULTIMO_NOME as NOME_COMPLETO_COLABORADOR
+            , COD_COLABORADOR || ' | ' || PRIMEIRO_NOME || ' ' || ULTIMO_NOME as DADOS_COLABORADOR
             , cast(EMAIL as varchar) as EMAIL_COLABORADOR
             , cast(CPF as varchar) as CPF_COLABORADOR
             , cast(ENDERECO as varchar) as ENDERECO_COLABORADOR
