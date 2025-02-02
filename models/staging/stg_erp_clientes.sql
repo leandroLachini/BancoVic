@@ -16,7 +16,7 @@ with
             , cast(DATA_NASCIMENTO as date) as DATA_NASCIMENTO_CLIENTE
             , cast(PRIMEIRO_NOME as varchar) as PRIMEIRO_NOME
             , cast(ULTIMO_NOME as varchar) as ULTIMO_NOME
-            , COD_CLIENTE || '|' ||PRIMEIRO_NOME || ' ' || ULTIMO_NOME as DADOS_CLIENTE
+            , COD_CLIENTE || ' | ' ||PRIMEIRO_NOME || ' ' || ULTIMO_NOME as DADOS_CLIENTE
             , cast(EMAIL as varchar) as EMAIL_CLIENTE
             , cast(TIPO_CLIENTE as varchar) as TIPO_CLIENTE
             , cast(CPFCNPJ as varchar) as CPFCNPJ_CLIENTE
