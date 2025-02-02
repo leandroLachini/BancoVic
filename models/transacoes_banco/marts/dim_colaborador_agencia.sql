@@ -5,7 +5,7 @@ with
         select
             COD_COLABORADOR
             , COD_AGENCIA
-            , NOME_COMPLETO_COLABORADOR
+            , DADOS_COLABORADOR
             , NOME_AGENCIA
             , CIDADE_AGENCIA
             , UF_AGENCIA

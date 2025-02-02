@@ -33,8 +33,8 @@ with
             , propostas.QUANTIDADE_PARCELAS
             , propostas.CARENCIA
             , propostas.STATUS_PROPOSTA
-            , colaboradores.NOME_COMPLETO_COLABORADOR
-            , clientes.NOME_COMPLETO_CLIENTE
+            , colaboradores.DADOS_COLABORADOR
+            , clientes.DADOS_CLIENTE
             , clientes.DATA_INCLUSAO_CLIENTE
             , clientes.CPFCNPJ_CLIENTE
         from propostas

@@ -4,7 +4,7 @@ with
     clientes as (
         select
             COD_CLIENTE
-            , NOME_COMPLETO_CLIENTE
+            , DADOS_CLIENTE
             , TIPO_CLIENTE
             , DATA_INCLUSAO_CLIENTE
             , DATA_NASCIMENTO_CLIENTE
