@@ -3,76 +3,83 @@ https://medium.com/indiciumtech/date-dimension-how-to-create-a-practical-and-use
 */
 
 with 
-     raw_generated_data as ( 
+     gerandor_de_datas as ( 
         {{ dbt_date.get_date_dimension('2010-01-01', '2023-12-31') }} 
-    ) 
-
-    , id_year_month as ( 
-        select 
-             raw_generated_data. *
-            , MONTH_NAME_SHORT || '-' || YEAR_NUMBER as MONTH_YEAR
-            , cast(YEAR_NUMBER || MONTH_OF_YEAR as int) as YEAR_MONTH
-        from raw_generated_data 
     )
 
-    /* renomeando algumas colunas para o portugues */
-    
-    , days_named as (
+    /* selecionando e renomeando algumas colunas para o portugues */
+    , renomeando as ( 
+        select 
+            DATE_DAY as DATA
+            , DAY_OF_MONTH as DIA_DO_MES
+            , QUARTER_OF_YEAR as TRIMESTRE_DO_ANO
+            , MONTH_OF_YEAR as MES_DO_ANO
+            , DAY_OF_WEEK as DIA_DA_SEMANA
+            , cast(YEAR_NUMBER as int) as ANO
+            , cast(YEAR_NUMBER || MONTH_OF_YEAR as int) as ANO_MES
+        from gerandor_de_datas 
+    )
+
+    /* incluindo algumas colunas */
+    , add_colunas as (
         select
-            *
+            DATA
+            , DIA_DO_MES
+            , ANO
+            , ANO_MES
             , case
-                when DAY_OF_WEEK = 1 then 'domingo'
-                when DAY_OF_WEEK = 2 then 'segunda-feira'
-                when DAY_OF_WEEK = 3 then 'terça-feira'
-                when DAY_OF_WEEK = 4 then 'quarta-feira'
-                when DAY_OF_WEEK = 5 then 'quinta-feira'
-                when DAY_OF_WEEK = 6 then 'sexta-feira'
+                when DIA_DA_SEMANA = 1 then 'domingo'
+                when DIA_DA_SEMANA = 2 then 'segunda-feira'
+                when DIA_DA_SEMANA = 3 then 'terça-feira'
+                when DIA_DA_SEMANA = 4 then 'quarta-feira'
+                when DIA_DA_SEMANA = 5 then 'quinta-feira'
+                when DIA_DA_SEMANA = 6 then 'sexta-feira'
                 else 'sábado' 
-            end as nome_do_dia
+            end as NOME_DO_DIA
             , case
-                when MONTH_OF_YEAR = 1 then 'janeiro'
-                when MONTH_OF_YEAR = 2 then 'fevereiro'
-                when MONTH_OF_YEAR = 3 then 'março'
-                when MONTH_OF_YEAR = 4 then 'abril'
-                when MONTH_OF_YEAR = 5 then 'maio'
-                when MONTH_OF_YEAR = 6 then 'junho'
-                when MONTH_OF_YEAR = 7 then 'julho'
-                when MONTH_OF_YEAR = 8 then 'agosto'
-                when MONTH_OF_YEAR = 9 then 'setembro'
-                when MONTH_OF_YEAR = 10 then 'outubro'
-                when MONTH_OF_YEAR = 11 then 'novembro'
+                when MES_DO_ANO = 1 then 'janeiro'
+                when MES_DO_ANO = 2 then 'fevereiro'
+                when MES_DO_ANO = 3 then 'março'
+                when MES_DO_ANO = 4 then 'abril'
+                when MES_DO_ANO = 5 then 'maio'
+                when MES_DO_ANO = 6 then 'junho'
+                when MES_DO_ANO = 7 then 'julho'
+                when MES_DO_ANO = 8 then 'agosto'
+                when MES_DO_ANO = 9 then 'setembro'
+                when MES_DO_ANO = 10 then 'outubro'
+                when MES_DO_ANO = 11 then 'novembro'
                 else 'dezembro' 
-            end as nome_do_mes
+            end as NOME_DO_MES
             , case
-                when MONTH_OF_YEAR = 1 then 'jan'
-                when MONTH_OF_YEAR = 2 then 'fev'
-                when MONTH_OF_YEAR = 3 then 'mar'
-                when MONTH_OF_YEAR = 4 then 'abr'
-                when MONTH_OF_YEAR = 5 then 'mai'
-                when MONTH_OF_YEAR = 6 then 'jun'
-                when MONTH_OF_YEAR = 7 then 'jul'
-                when MONTH_OF_YEAR = 8 then 'ago'
-                when MONTH_OF_YEAR = 9 then 'set'
-                when MONTH_OF_YEAR = 10 then 'out'
-                when MONTH_OF_YEAR = 11 then 'nov'
+                when MES_DO_ANO = 1 then 'jan'
+                when MES_DO_ANO = 2 then 'fev'
+                when MES_DO_ANO = 3 then 'mar'
+                when MES_DO_ANO = 4 then 'abr'
+                when MES_DO_ANO = 5 then 'mai'
+                when MES_DO_ANO = 6 then 'jun'
+                when MES_DO_ANO = 7 then 'jul'
+                when MES_DO_ANO = 8 then 'ago'
+                when MES_DO_ANO = 9 then 'set'
+                when MES_DO_ANO = 10 then 'out'
+                when MES_DO_ANO = 11 then 'nov'
                 else 'dez' 
-            end as abrev_do_mes
+            end as ABREV_DO_MES
             , case
-                when QUARTER_OF_YEAR = 1 then '1º trimestre'
-                when QUARTER_OF_YEAR = 2 then '2º trimestre'
-                when QUARTER_OF_YEAR = 3 then '3º trimestre'
+                when TRIMESTRE_DO_ANO = 1 then '1º trimestre'
+                when TRIMESTRE_DO_ANO = 2 then '2º trimestre'
+                when TRIMESTRE_DO_ANO = 3 then '3º trimestre'
                 else '4º trimestre' 
-            end as nome_trimestre
+            end as NOME_TRIMESTRE
             , case
-                when QUARTER_OF_YEAR in(1,2) then 1
+                when TRIMESTRE_DO_ANO in(1,2) then 1
                 else 2
-            end as semestre
+            end as SEMESTRE
             , case
-                when QUARTER_OF_YEAR in(1,2) then '1º semestre'
+                when TRIMESTRE_DO_ANO in(1,2) then '1º semestre'
                 else '2º semestre'
-            end as nome_semestre
-            , abrev_do_mes || '-' || YEAR_NUMBER as mes_ano
-        from id_year_month
+            end as NOME_SEMESTRE
+            , ABREV_DO_MES || '-' || ANO as MES_ANO
+        from renomeando
     ) 
 
-select * from days_named
+select * from add_colunas
