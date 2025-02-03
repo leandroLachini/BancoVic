@@ -48,7 +48,8 @@ with
 /* formato da tabela final. */
     , final_table as (
         select
-            *
+            joined. *
+            , VALOR_PRESTACAO * QUANTIDADE_PARCELAS as VALOR_TOTAL_PRESTACAO
         from joined
     )
 
