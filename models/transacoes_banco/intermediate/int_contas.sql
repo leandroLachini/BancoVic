@@ -39,15 +39,23 @@ with
         select
             joined. *
             , getdate() as DATA_HOJE
-            , DATEDIFF ( year , DATA_INCLUSAO_CLIENTE , DATA_HOJE ) as TEMPO_CLIENTE
+            , DATEDIFF ( year , DATA_ABERTURA_CONTA , DATA_HOJE ) as TEMPO_CLIENTE
             , case
-                when TEMPO_CLIENTE <= 29 then '1-3'
+                when TEMPO_CLIENTE <= 3 then '1-3'
                 when TEMPO_CLIENTE between 4 and 6 then '4-6'
                 when TEMPO_CLIENTE between 7 and 9 then '7-9'
                 when TEMPO_CLIENTE between 10 and 12 then '10-12'
                 when TEMPO_CLIENTE between 13 and 14 then '13-14'
                 else '15-mais' 
             end as FAIXA_TEMPO_CLIENTE
+            , case
+                when TEMPO_CLIENTE <= 3 then '1'
+                when TEMPO_CLIENTE between 4 and 6 then '2'
+                when TEMPO_CLIENTE between 7 and 9 then '3'
+                when TEMPO_CLIENTE between 10 and 12 then '4'
+                when TEMPO_CLIENTE between 13 and 14 then '5'
+                else '6' 
+            end as CLASSIFICACAO_TEMPO_CLIENTE
             , DATEDIFF ( year , DATA_NASCIMENTO_CLIENTE , DATA_HOJE ) as IDADE_CLIENTE
             , case
                 when IDADE_CLIENTE <= 29 then '18-29'
