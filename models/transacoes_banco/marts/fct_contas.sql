@@ -17,7 +17,8 @@ with
             , DATA_INCLUSAO_CLIENTE
             , DATA_NASCIMENTO_CLIENTE
             , DATA_HOJE
-            , TEMPO_CLEINTE
+            , TEMPO_CLIENTE
+            , FAIXA_TEMPO_CLIENTE
             , IDADE_CLIENTE
             , FAIXA_ETARIA
         from {{ref("int_contas")}}
