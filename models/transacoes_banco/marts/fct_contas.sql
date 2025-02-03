@@ -19,6 +19,7 @@ with
             , DATA_HOJE
             , TEMPO_CLIENTE
             , FAIXA_TEMPO_CLIENTE
+            , CLASSIFICACAO_TEMPO_CLIENTE
             , IDADE_CLIENTE
             , FAIXA_ETARIA
         from {{ref("int_contas")}}
