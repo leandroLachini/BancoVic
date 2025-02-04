@@ -23,12 +23,12 @@ Camada que expõe produtos de dados a consumidores externos à plataforma de dad
 - Análise das propostas.
 - Análise das transações.
 
-### Principais recursos
+#### Principais recursos
 - Modern Data Stack: Arquitetura em nuvem mais flexível e capaz de lidar com a grande quantidade de dados que as empresas recebem atualmente.
 - Data Warehouse: Um repositório grande e centralizado que armazena dados estruturados e semiestruturados. Ele fornece uma fonte única para analistas e cientistas de dados.
 - Business Inteligence: Business intelligence (BI) e ferramentas analíticas são usadas para visualizar e analisar dados.
 
-### Tecnologias Utilizadas
+#### Tecnologias Utilizadas
 - Snowflake: armazenamento de banco de dados.
 - DBT: Transformação de dados.
 - Power BI: Visualização de dados e criação de dashboards.
