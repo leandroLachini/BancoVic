@@ -23,10 +23,10 @@ with
         select
             colaborador_agencia.COD_COLABORADOR
             , colaborador_agencia.COD_AGENCIA
+            , colaboradores.DATA_NASCIMENTO_COLABORADOR
             , colaboradores.DADOS_COLABORADOR
             , colaboradores.EMAIL_COLABORADOR
             , colaboradores.CPF_COLABORADOR
-            , colaboradores.DATA_NASCIMENTO_COLABORADOR
             , colaboradores.ENDERECO_COLABORADOR
             , colaboradores.CEP_COLABORADOR
             , agencia.NOME_AGENCIA
