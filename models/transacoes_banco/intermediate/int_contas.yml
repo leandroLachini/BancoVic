@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: int_contas
+    description: "Tabale com os dados das contas do bancovic."
+    columns:
+      - name: NUM_CONTA
+        description: "Chave primaria com o numero do cliente."
+      - name: COD_CLIENTE
+        description: "Chave estrangeira com o codigo do cliente."
+      - name: COD_AGENCIA
+        description: "Chave estrangeira com o codigo da agencia."
+      - name: COD_COLABORADOR
+        description: "Chave estrangeira com o codigo do colaborador."
+      - name: DATA_ABERTURA_CONTA
+        description: "Data de abertura da conta."
+      - name: TIPO_CONTA
+        description: "Numero do CPF do colaborador."
+      - name: SALDO_TOTAL_CONTA
+        description: "Saldo total da conta."
+      - name: SALDO_DISPONIVEL_CONTA
+        description: "Saldo disponivel da conta."
+      - name: DATA_ULTIMO_LANCAMENTO
+        description: "Data da ultima movimentacao da conta."
+      - name: DADOS_CLIENTE
+        description: "Codigo do cliente + Primeiro e Ultimo nome do cliente."
+      - name: TIPO_CLIENTE
+        description: "Tipo de cliente (PF=pessoa fisica ou PJ=pessoa juridica)."
+      - name: DATA_INCLUSAO_CLIENTE
+        description: "Data de inclusao do cliente no cadastrado do banco/agencia."
+      - name: DATA_NASCIMENTO_CLIENTE
+        description: "Data de nascimento do cliente."
+      - name: DATA_HOJE
+        description: "Data atual."
+      - name: TEMPO_CLIENTE
+        description: "Tempo que é cliente do banco."
+      - name: FAIXA_TEMPO_CLIENTE
+        description: "Classificação de faxia de tempo como cliente."
+      - name: CLASSIFICACAO_TEMPO_CLIENTE
+        description: "Classificacao da posicao da faixa de tempo"
+      - name: IDADE_CLIENTE
+        description: "Idade do cliente."
+      - name: FAIXA_ETARIA
+        description: "Classificação de faixa etaria."

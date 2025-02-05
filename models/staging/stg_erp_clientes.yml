@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: staging_clientes
+    description: "Tabale com os dados dos clientes do bancovic."
+    columns:
+      - name: COD_CLIENTE
+        description: "Chave primaria com o codigo do cliente."
+      - name: DATA_INCLUSAO_CLIENTE
+        description: "Data de inclusao do cliente no cadastrado do banco/agencia."
+      - name: DATA_NASCIMENTO_CLIENTE
+        description: "Data de nascimento do cliente."
+      - name: PRIMEIRO_NOME
+        description: "Primeiro nome do cliente."
+      - name: ULTIMO_NOME
+        description: "Ultimo nome do cliente."
+      - name: DADOS_CLIENTE
+        description: "Codigo do cliente + Primeiro e Ultimo nome do cliente."
+      - name: EMAIL_CLIENTE
+        description: "Email do cliente."
+      - name: TIPO_CLIENTE
+        description: "Tipo de cliente (PF=pessoa fisica ou PJ=pessoa juridica)."
+      - name: CPFCNPJ_CLIENTE
+        description: "Numero do CPF ou CNPJ do cliente."
+      - name: ENDERECO_CLIENTE
+        description: "Endereco do cliente."
+      - name: CEP_CLIENTE
+        description: "CEP do endereco do cliente"

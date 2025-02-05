@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: int_propostas
+    description: "Tabela com os dados das propostas do bancovic."
+    columns:
+      - name: COD_PROPOSTA
+        description: "Chave primaria com o codigo da proposta."
+      - name: COD_CLIENTE
+        description: "Chave estrangeira com o codigo do cliente."
+      - name: COD_COLABORADOR
+        description: "Chave estrangeira com o codigo do colaborador."
+      - name: DATA_ENTRADA_PROPOSTA
+        description: "Data que a proposta foi realizada."
+      - name: TAXA_JUROS_MENSAL
+        description: "Taxa de juros mensal da proposta."
+      - name: VALOR_PROPOSTA
+        description: "Valor da proposta."
+      - name: VALOR_FINANCIAMENTO
+        description: "Valor do financiamento."
+      - name: VALOR_ENTRADA
+        description: "Valor da entrada."
+      - name: VALOR_PRESTACAO
+        description: "Valor da prestacao."
+      - name: QUANTIDADE_PARCELAS
+        description: "Quantidade de parcelas do financiamento."
+      - name: CARENCIA
+        description: "Quantidade de meses de carencia (sem necessidade de pagamento)."
+      - name: STATUS_PROPOSTA
+        description: "Status da proposta."
+      - name: DADOS_COLABORADOR
+        description: "Codigo do colaborador + Primeiro e Ultimo nome do colaborador."
+      - name: DATA_INCLUSAO_CLIENTE
+        description: "Data de inclusao do cliente no cadastrado do banco/agencia."
+      - name: DADOS_CLIENTE
+        description: "Codigo do cliente + Primeiro e Ultimo nome do cliente."
+      - name: CPFCNPJ_CLIENTE
+        description: "Numero do CPF ou CNPJ do cliente."
+      - name: VALOR_TOTAL_PRESTACAO
+        description: "Valor total das prestacoes ( VALOR_PRESTACAO * QUANTIDADE_PARCELAS)."

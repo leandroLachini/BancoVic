@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: int_transacoes
+    description: "Tabela com as transacoes realizadas pelo bancovic."
+    columns:
+      - name: COD_TRANSACAO
+        description: "Chave primaria com o codigo da transacao."
+      - name: NUM_CONTA
+        description: "Chave estrangeira com o numero da conta."
+      - name: DATA_TRANSACAO
+        description: "Data que a transacao foi realizada."
+      - name: NOME_TRANSACAO
+        description: "Nome da transacao."
+      - name: VALOR_TRANSACAO
+        description: "Valor da transacao."
+      - name: COD_CLIENTE
+        description: "Chave estrangeira com o codigo do cliente."
+      - name: COD_AGENCIA
+        description: "Chave estrangeira com o codigo da agencia."
+      - name: COD_COLABORADOR
+        description: "Chave estrangeira com o codigo do colaborador."
+      - name: DATA_ABERTURA_CONTA
+        description: "Data de abertura da conta."
+      - name: TIPO_CONTA
+        description: "Numero do CPF do colaborador."
+      - name: SALDO_TOTAL_CONTA
+        description: "Saldo total da conta."
+      - name: SALDO_DISPONIVEL_CONTA
+        description: "Saldo disponivel da conta."
