@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: int_colaborador_agencia
+    description: "Tabela com os codigos dos colaboradores e angecias do bancovic."
+    columns:
+      - name: COD_COLABORADOR
+        description: "Chave estrangeira com o codigo do colaborador."
+      - name: COD_AGENCIA
+        description: "Chave estrangeira com o codigo da agencia."
+      - name: DATA_NASCIMENTO_COLABORADOR
+        description: "Data de nascimento do colaborador."
+      - name: DADOS_COLABORADOR
+        description: "Codigo do colaborador + Primeiro e Ultimo nome do colaborador."
+      - name: EMAIL
+        description: "Email do colaborador."
+      - name: CPF
+        description: "Numero do CPF do colaborador."
+      - name: ENDERECO
+        description: "Endereco do colaborador."
+      - name: CEP
+        description: "CEP do endereco do colaborador."
+      - name: NOME_AGENCIA
+        description: "Nome da agencia."
+      - name: ENDERECO_AGENCIA
+        description: "Endereco da agencia."
+      - name: CIDADE_AGENCIA
+        description: "Nome da cidade onde a agencia está localizada."
+      - name: UF_AGENCIA
+        description: "Sigla do estado onde a agencia está localizada."
+      - name: DATA_ABERTURA_AGENCIA
+        description: "Data de inaguracao da agencia"
+      - name: TIPO_AGENCIA
+        description: "Tipo de agencia. (fisica ou digital)"

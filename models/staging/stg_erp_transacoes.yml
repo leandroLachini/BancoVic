@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: seed_transacoes
-    description: "Tabela seed com as transacoes realizadas pelo bancovic."
+  - name: staging_transacoes
+    description: "Tabela com as transacoes realizadas pelo bancovic."
     columns:
       - name: COD_TRANSACAO
         description: "Chave primaria com o codigo da transacao."
@@ -14,3 +14,4 @@ models:
         description: "Nome da transacao."
       - name: VALOR_TRANSACAO
         description: "Valor da transacao."
+        

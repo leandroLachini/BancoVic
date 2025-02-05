@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: staging_colaborador_agencia
+    description: "Tabela com os codigos dos colaboradores e angecias do bancovic."
+    columns:
+      - name: COD_COLABORADOR
+        description: "Chave estrangeira com o codigo do colaborador."
+      - name: COD_AGENCIA
+        description: "Chave estrangeira com o codigo da agencia."

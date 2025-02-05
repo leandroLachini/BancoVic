@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_colaborador_agencia
+    description: "Tabela com os codigos dos colaboradores e angecias do bancovic."
+    columns:
+      - name: COD_COLABORADOR
+        description: "Chave estrangeira com o codigo do colaborador."
+      - name: COD_AGENCIA
+        description: "Chave estrangeira com o codigo da agencia."
+      - name: DADOS_COLABORADOR
+        description: "Codigo do colaborador + Primeiro e Ultimo nome do colaborador."
+      - name: NOME_AGENCIA
+        description: "Nome da agencia."
+      - name: CIDADE_AGENCIA
+        description: "Nome da cidade onde a agencia está localizada."
+      - name: UF_AGENCIA
+        description: "Sigla do estado onde a agencia está localizada."
+      - name: TIPO_AGENCIA
+        description: "Tipo de agencia. (fisica ou digital)"
